@@ -1,0 +1,5 @@
+[webservers]
+52.48.129.218
+
+[webservers:vars]
+ansible_user=ubuntu

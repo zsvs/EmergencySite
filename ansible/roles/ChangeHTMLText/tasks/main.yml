@@ -1,0 +1,18 @@
+---
+# tasks file for ChangeHTMLText
+- name: Get timestamp from the system
+  shell: "date +%d/%m/%Y"
+  register: tstamp
+
+- name: Set variables
+  set_fact:
+    curr_date: "{{ tstamp.stdout[0:10]}}"
+
+- name: Set up text in html file from template
+  template:
+    src: "index.html.j2"
+    dest: "/var/www/html/index.html"
+  notify:
+  - Restart Nginx
+  tags:
+  - nginx-change
