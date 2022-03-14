@@ -9,11 +9,11 @@ i = int(sys.argv[1])
 URL = sys.argv[2]
 
 
-TestRq = Requster.HTTPClient()
+TestRq = Requster.HTTPClient(URL)
 TestRq.SetPayload({"Russian_Warship" : "Go Fuck yourself"})
 
 while i != 0:
-    ProcessArray.append(ProcessFactory.ProcessFactory(f"Process{i}").CreateInstance(TestRq.PostRequest))
+    ProcessArray.append(ProcessFactory.ProcessFactory(f"Process{i}").CreateInstance(TestRq.GetRequest))
     i -= 1
 
 
