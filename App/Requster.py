@@ -13,7 +13,7 @@ class HTTPClient:
                             "Accept": "*/*",
                             "User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36",
                             "Content-Encoding": "utf-8",
-                            "Keep-Alive": "timeout=10, max=100"
+                            "Keep-Alive": "timeout=60, max=10000"
                         }
         self.__URL = URL
     def SetPayload(self, Data):
