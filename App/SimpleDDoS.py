@@ -18,6 +18,7 @@ while i != 0:
 
 
 if __name__ == '__main__':
+    print("Attacked URL:", URL)
     start = time.perf_counter()
     for process in ProcessArray:
         process.start()
