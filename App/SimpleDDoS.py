@@ -1,7 +1,7 @@
 ﻿import time
-import App.ProcessFactory as ProcessFactory
+import ProcessFactory
 import sys
-import App.Requster as Requster
+import Requster
 
 ProcessArray = list()
 
