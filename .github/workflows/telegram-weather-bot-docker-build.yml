@@ -20,7 +20,7 @@ jobs:
 
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: cd app/ && docker build . -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/somesimpleatkapp:latest
+      run: cd App/ && docker build . -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/somesimpleatkapp:latest
 
     - name: Push docker image to Docker Hub
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/somesimpleatkapp:latest
